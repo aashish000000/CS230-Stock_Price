@@ -1,0 +1,145 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    background-color: #242424;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 100%;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.search-container input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: #1a1a1a;
+    color: white;
+}
+
+.search-container button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background: #646cff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #535bf2;
+}
+
+.stock-info {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.price-container {
+    margin: 1rem 0;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-right: 1rem;
+}
+
+.change {
+    font-size: 1.2rem;
+}
+
+.positive {
+    color: #4caf50;
+}
+
+.negative {
+    color: #f44336;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+}
+
+.error {
+    color: #f44336;
+    text-align: center;
+    padding: 1rem;
+}
+
+.chart-container {
+    background: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.timeframe-selector {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.timeframe-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #646cff;
+    background: transparent;
+    color: #646cff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.timeframe-btn:hover {
+    background: #646cff20;
+}
+
+.timeframe-btn.active {
+    background: #646cff;
+    color: white;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    .stock-info, .chart-container {
+        background: #f5f5f5;
+    }
+    .search-container input {
+        background: white;
+        color: black;
+        border-color: #ddd;
+    }
+}
